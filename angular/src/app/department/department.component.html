@@ -1,0 +1,21 @@
+<div *ngIf="department?.length > 0">
+
+<table datatable id="departtable" class="row-border hover" >
+  <thead>
+    <tr>
+      <th align="left">Name</th>
+      <th align="left">Department name</th>
+      <th align="left">Course Name</th>
+      <th align="left">Teacher Count</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let teacher of department">
+      <td>{{ teacher.teacherName }}</td>
+      <td>{{ teacher.department }}</td>
+      <td>{{ teacher.course.name }}</td>
+      <td>{{ teacher.count }}</td>
+    </tr>
+  </tbody>
+</table>
+</div>
